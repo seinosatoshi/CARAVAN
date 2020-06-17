@@ -49,10 +49,12 @@
     </div>
     <%= image_tag "img/forest.jpg", class:"single-image" %>
     <p class="single-text">
-      <%= @blog.body %>
-    </p>
-    <a href="#">編集</a>
-    <a href="#">削除</a>
+    <%= @blog.body %>
+	</p>
+	<!-- 編集部分 -->
+	<%= link_to "編集", edit_blog_path(@blog) %>
+    <!-- 追加部分 -->
+    <%= link_to "削除", blog_path(@blog), method: :delete %>
     <div class="author-case clearfix">
       <div class="author-image"></div>
       <div class="author-box">
